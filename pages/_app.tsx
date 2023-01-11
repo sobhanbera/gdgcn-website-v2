@@ -1,6 +1,17 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import '../styles/globals.scss'
+import type {AppProps} from 'next/app'
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+import {ThemeProvider} from '@/hooks'
+import {ErrorBoundary} from '@/error'
+
+export default function App({Component, pageProps}: AppProps) {
+    return (
+        <ErrorBoundary id={'theme'}>
+            <ThemeProvider>
+                <ErrorBoundary id={'app'}>
+                    <Component {...pageProps} />
+                </ErrorBoundary>
+            </ThemeProvider>
+        </ErrorBoundary>
+    )
 }
