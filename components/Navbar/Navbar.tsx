@@ -9,6 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import Logo from '../../assets/NavLogo.svg'
 
 const pages = ['Home', 'About Us', 'Team', 'Events', 'Sponsors & Partners', 'Contact Us', 'FAQs'];
 
@@ -27,29 +28,10 @@ function ResponsiveAppBar() {
     return (
         <AppBar position="static">
             <Container maxWidth="xl" sx={{ backgroundColor: '#E9E8E8' }} >
-                <Toolbar disableGutters>
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="a"
-                        href="/"
-                        sx={{
-                            mr: 2,
-                            display: { xs: 'none', md: 'flex' },
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'black',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        LOGO
-                    </Typography>
-
-                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                <Toolbar>
+                    <Box sx={{ flexGrow: 0.2, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
-                            size="large"
-                            aria-label="account of current user"
+                            size="medium"
                             aria-controls="menu-appbar"
                             aria-haspopup="true"
                             onClick={handleOpenNavMenu}
@@ -82,34 +64,19 @@ function ResponsiveAppBar() {
                             ))}
                         </Menu>
                     </Box>
-
+                    <img
+                        alt="Your logo."
+                        src="https://i.imgur.com/CQdQVc1.png"
+                        style={{ width: '290px' }}
+                    />
                     {/* Desktop version code starts */}
 
-                    <Typography
-                        variant="h5"
-                        noWrap
-                        component="a"
-                        href=""
-                        sx={{
-
-                            mr: 2,
-                            display: { xs: 'flex', md: 'none' },
-                            flexGrow: 1,
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'black',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        LOGO
-                    </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
                             <Button
                                 key={page}
                                 onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'black', display: 'block', textTransform: 'none', fontSize: '17px', fontWeight: 500, }}
+                                sx={{ mx:1.5, my: 2, color: 'black', display: 'block', textTransform: 'none', fontSize: '15px', fontWeight: 500, }}
                             >
                                 {page}
                             </Button>

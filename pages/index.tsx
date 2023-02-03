@@ -1,3 +1,9 @@
+import Navbar from "@/components/Navbar/Navbar";
+
 export default function Home() {
-    return <>Developement to be started</>
+    return(
+        <div>
+            <Navbar/>
+        </div>
+    );
 }
