@@ -3,3 +3,5 @@
  * it exports all the components
  * it also exports the module
  */
+
+export * from './ResponsiveAppBar'

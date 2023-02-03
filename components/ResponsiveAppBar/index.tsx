@@ -12,16 +12,17 @@ import MenuItem from '@mui/material/MenuItem'
 import Logo from '../../assets/NavLogo.svg'
 
 const pages = [
-    'Home',
-    'About Us',
-    'Team',
-    'Events',
-    'Sponsors & Partners',
-    'Contact Us',
-    'FAQs',
+    {route: '/home', name: 'Home'},
+    {route: '/aboutus', name: 'About Us'},
+    {route: '/team', name: 'Team'},
+    {route: '/events', name: 'Events'},
+    {route: '/sponsors', name: 'Sponsors & Partners'},
+    {route: '/contactus', name: 'contactus'},
+    {route: '/faqs', name: 'faqs'},
 ]
 
-function ResponsiveAppBar() {
+interface ResponsiveAppBarProps {}
+export const ResponsiveAppBar = (_props: ResponsiveAppBarProps) => {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
         null,
     )
@@ -45,7 +46,7 @@ function ResponsiveAppBar() {
                             aria-controls="menu-appbar"
                             aria-haspopup="true"
                             onClick={handleOpenNavMenu}
-                            color="#000">
+                            color={'#000000'}>
                             <MenuIcon />
                         </IconButton>
                         <Menu
@@ -65,14 +66,14 @@ function ResponsiveAppBar() {
                             sx={{
                                 display: {xs: 'block', md: 'none'},
                             }}>
-                            {pages.map(page => (
+                            {pages.map(pageData => (
                                 <MenuItem
-                                    key={page}
+                                    key={pageData.route}
                                     onClick={handleCloseNavMenu}>
                                     <Typography
                                         textAlign="center"
                                         sx={{textTransform: 'none'}}>
-                                        {page}
+                                        {pageData.name}
                                     </Typography>
                                 </MenuItem>
                             ))}
@@ -86,9 +87,9 @@ function ResponsiveAppBar() {
                     {/* Desktop version code starts */}
 
                     <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
-                        {pages.map(page => (
+                        {pages.map(pageData => (
                             <Button
-                                key={page}
+                                key={pageData.route}
                                 onClick={handleCloseNavMenu}
                                 sx={{
                                     mx: 1.5,
@@ -99,7 +100,7 @@ function ResponsiveAppBar() {
                                     fontSize: '15px',
                                     fontWeight: 500,
                                 }}>
-                                {page}
+                                {pageData.name}
                             </Button>
                         ))}
                     </Box>
@@ -108,4 +109,3 @@ function ResponsiveAppBar() {
         </AppBar>
     )
 }
-export default ResponsiveAppBar
