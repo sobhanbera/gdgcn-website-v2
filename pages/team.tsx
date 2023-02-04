@@ -1,3 +1,9 @@
+import Intro from "@/components/Team-Components/Intro";
+
 export default function Team() {
-    return <div>Teams data Page goes here...</div>
+    return(
+    <div>
+        <Intro/>
+    </div>
+    );
 }
