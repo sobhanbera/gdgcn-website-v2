@@ -12,7 +12,7 @@ export default function App({Component, pageProps}: AppProps) {
         <ErrorBoundary id={'theme'}>
             <ThemeProvider>
                 <Head>
-                    <title>GDG Cloud Native</title>
+                    <title>GDG Cloud Nagpur</title>
                 </Head>
 
                 <ErrorBoundary id={'app'}>
