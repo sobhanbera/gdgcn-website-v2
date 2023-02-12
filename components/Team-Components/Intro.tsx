@@ -6,7 +6,7 @@ import { Avatar, Grid, Box, Paper, Stack, Tabs, Tab, Typography, useMediaQuery }
 import Team from './Team';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 let img2 = "https://i.imgur.com/tEXgqCb.png"
-let img3 = "https://i.imgur.com/dLBY0dP.png"
+let img3 = "https://i.imgur.com/svZRSRh.png"
 
 
 /* JSON Data */
@@ -23,14 +23,14 @@ const leads = [
         "linkedin": "https://www.linkedin.com/in/aniruddha-khandwe-4008ab137/",
         "github": "https://github.com/aniruddha1khandwe",
         "role": "Co-Organiser",
-        "skills": "Cybersecurity and Compliance | Cloud security | Machine Learning"
+        "skills": "Cybersecurity | Cloud security | Machine Learning"
     },
     {
         "name": "Sarang Prabhate",
         "linkedin": "https://www.linkedin.com/in/aniruddha-khandwe-4008ab137/",
         "github": "https://github.com/aniruddha1khandwe",
         "role": "Operations Lead",
-        "skills": ""
+        "skills": "Cybersecurity | Cloud security | Machine Learning"
     }
 ];
 
@@ -40,14 +40,21 @@ const domainLeads = [
         "linkedin": "https://www.linkedin.com/in/chandak-mohit/",
         "github": "https://github.com/mohitchandak",
         "role": "Lead Community Manager",
-        "skills": "HTML C++"
+        "skills": "HTML | C++ | Full Stack Developer"
     },
     {
         "name": "Aaliya Ali",
         "linkedin": "https://www.linkedin.com/in/aaliyaali",
         "github": "https://github.com/Aaliya-Ali",
         "role": "Content Team Lead",
-        "skills": "Learner Flutter Developer"
+        "skills": "Learner | Flutter Dev | Technical Content Writing"
+    },
+    {
+        "name": "Rinesh Patil",
+        "linkedin": "https://www.linkedin.com/in/aaliyaali",
+        "github": "https://github.com/Aaliya-Ali",
+        "role": "Content Team Lead",
+        "skills": "Learner | Flutter Developer"
     },
 ]
 
@@ -58,13 +65,35 @@ const Intro = () => {
             <Box sx={{ flexGrow: 1, marginTop: '5%' }}>
                 <Grid container>
                     <Grid sx={{ marginLeft: '3%' }} xs={12} md={7}>
-                        <Typography sx={{ fontSize: '52px', fontWeight: 600, fontFamily: 'Fira Sans', }}>
+                        <Typography sx={{
+                            fontSize: '52px',
+                            fontWeight: 600,
+                            fontFamily: 'Fira Sans',
+                            "@media (max-width:780px)": {
+                                fontSize: '48px'
+                            }
+                        }}>
                             Meet Our Team
                         </Typography>
-                        <Typography sx={{ fontFamily: 'Fira Sans', fontSize: '22px', fontWeight: 500, color: '#73777B', position: 'relative', marginTop: '-17px' }} >
+                        <Typography sx={{
+                            fontFamily: 'Fira Sans',
+                            fontSize: '22px',
+                            fontWeight: 500,
+                            color: '#73777B',
+                            position: 'relative',
+                            marginTop: '-17px',
+                            "@media (max-width:780px)": {
+                                fontSize: '20px'
+                            }
+                        }} >
                             The Ones, who are making it happen......
                         </Typography>
-                        <Typography sx={{ fontFamily: 'Fira Sans', fontSize: '16px', fontWeight: 400, marginTop: '16px' }}>
+                        <Typography sx={{
+                            fontFamily: 'Fira Sans',
+                            fontSize: '16px',
+                            fontWeight: 400,
+                            marginTop: '16px'
+                        }}>
                             GDG Cloud Nagpur aspires to expand its community of passionate
                             and fervent developers to encapsulate the latest and advanced
                             technologies such as Cloud Computing, Artificial Intelligence, Machine Learning, Big Data,
@@ -88,9 +117,18 @@ const Intro = () => {
                 container
                 sx={{
                     width: "100%",
+                    marginTop: '6%'
                 }}
             >
-                <Typography sx={{ marginLeft: '3%', fontSize: '52px', fontWeight: 600, fontFamily: 'Fira Sans', }}>
+                <Typography sx={{
+                    marginLeft: '3%',
+                    fontSize: '52px',
+                    fontWeight: 600,
+                    fontFamily: 'Fira Sans',
+                    "@media (max-width:780px)": {
+                        fontSize: '38px'
+                    }
+                }}>
                     Leads
                 </Typography>
                 <Grid
@@ -108,7 +146,7 @@ const Intro = () => {
                     }) => (
                         <Grid md={4} xs={12}>
                             <div style={{
-                                backgroundSize: "130%",
+                                backgroundSize: "140%",
                                 backgroundImage: `url(${img2})`,
                                 backgroundRepeat: "no-repeat",
                                 margin: 30,
@@ -186,7 +224,15 @@ const Intro = () => {
                     width: "100%",
                 }}
             >
-                <Typography sx={{ marginLeft: '3%', fontSize: '52px', fontWeight: 600, fontFamily: 'Fira Sans', }}>
+                <Typography sx={{
+                    marginLeft: '3%',
+                    fontSize: '52px',
+                    fontWeight: 600,
+                    fontFamily: 'Fira Sans',
+                    "@media (max-width:780px)": {
+                        fontSize: '38px'
+                    }
+                }}>
                     Domain Leads
                 </Typography>
                 <Grid
@@ -204,7 +250,7 @@ const Intro = () => {
                     }) => (
                         <Grid md={4} xs={12}>
                             <div style={{
-                                backgroundSize: "130%",
+                                backgroundSize: "140%",
                                 backgroundImage: `url(${img3})`,
                                 backgroundRepeat: "no-repeat",
                                 margin: 30,
