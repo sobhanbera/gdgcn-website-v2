@@ -1,3 +1,7 @@
+import PastEvents from "@/components/Event-Components/EventsIntro";
+
 export default function Events() {
-    return <div>Events data Page goes here...</div>
+    return <div>
+        <PastEvents/>
+    </div>
 }
