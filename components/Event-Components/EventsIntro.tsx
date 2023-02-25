@@ -36,7 +36,7 @@ const PastEvents = (props: Props) => {
                     </Typography>
                     <Typography sx={{
                         fontFamily: 'Fira Sans',
-                        fontSize: '22px',
+                        fontSize: '20px',
                         fontWeight: 500,
                         color: '#73777B',
                         position: 'relative',
