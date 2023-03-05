@@ -1,3 +1,9 @@
+import {LandingInterface} from '@/containers'
+
 export default function Home() {
-    return <div></div>
+    return (
+        <div>
+            <LandingInterface />
+        </div>
+    )
 }
