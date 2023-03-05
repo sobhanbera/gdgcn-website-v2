@@ -1,0 +1,149 @@
+.footer {
+    .footerContainer {
+        padding: 30px 0 20px 0;
+
+        max-width: 95%;
+        margin: auto;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        border-bottom: 1px solid var(--border);
+
+        .footerLeft {
+            img {
+                max-height: 50px;
+
+                &.small {
+                    display: none;
+                    max-height: 40px;
+                }
+            }
+        }
+
+        .footerRight {
+            ul {
+                display: flex;
+
+                li {
+                    margin: 0 7px;
+                    border-radius: 3px;
+                    overflow: hidden;
+
+                    a {
+                        display: block;
+                        padding: 10px 15px;
+                        color: var(--hyperlink-text-color);
+
+                        font-family: Inter, sans-serif;
+                        font-weight: 600;
+                        font-size: 14px;
+
+                        &:hover {
+                            background-color: rgba(var(--primary-rgb), 0.05);
+                            color: var(--primary);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footerBottomArea {
+        display: flex;
+        justify-content: space-between;
+
+        max-width: 95%;
+        margin: auto;
+
+        padding: 15px 0;
+
+        .copyrightText {
+            font-size: 15px;
+
+            &::after {
+                content: 'Google Developer Groups - Cloud Nagpur.';
+            }
+        }
+
+        .madeWithLoveText {
+            font-size: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .footer {
+        .footerContainer {
+            flex-direction: column;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .footer {
+        .footerContainer {
+            .footerRight {
+                padding-top: 15px;
+            }
+        }
+
+        .footerBottomArea {
+            .copyrightText {
+                &::after {
+                    content: 'GDG - Cloud Nagpur.';
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer {
+        .footerContainer {
+            .footerRight {
+                ul {
+                    flex-wrap: wrap;
+                    justify-content: center;
+
+                    li {
+                        margin: 5px 0;
+                    }
+                }
+            }
+        }
+
+        .footerBottomArea {
+            .copyrightText {
+                font-size: 13px;
+
+                &::after {
+                    content: 'GDGCN.';
+                }
+            }
+
+            .madeWithLoveText {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .footer {
+        .footerContainer {
+            .footerLeft {
+                img {
+                    &.regular {
+                        display: none;
+                    }
+
+                    &.small {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

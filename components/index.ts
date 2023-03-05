@@ -5,3 +5,6 @@
  */
 
 export * from './ResponsiveAppBar'
+
+export * from './Footer'
+export * from './Header'

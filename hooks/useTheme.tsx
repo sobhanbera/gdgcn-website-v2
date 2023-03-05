@@ -98,8 +98,16 @@ export default function ThemeProvider({children}: ThemeProviderProps) {
      * NOTE: totally optional
      */
     useEffect(() => {
-        // randomizeTheme()
+        randomizeTheme()
     }, [])
+
+    /**
+     * we are also embeding the theme data to the main
+     * html body so that we could use it in the css
+     */
+    useEffect(() => {
+        document.body.className = `theme-${themeName}`
+    }, [themeName])
 
     const themeValues: ThemeContextModal = {
         light: themeName.includes('light'),
