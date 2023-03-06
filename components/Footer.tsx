@@ -31,6 +31,10 @@ export function Footer(props: FooterProps) {
                         </li>
 
                         <li>
+                            <Link href={'/team'}>Sponsers</Link>
+                        </li>
+
+                        <li>
                             <Link href={'/team'}>FAQs</Link>
                         </li>
 

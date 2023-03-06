@@ -44,6 +44,10 @@
     list-style-type: none;
 
     transition: 0.35s all ease;
+
+    &::selection {
+        background: rgba(var(--primary-rgb), 0.3);
+    }
 }
 
 html,
