@@ -37,13 +37,12 @@
         }
 
         .joinButton {
-            background-color: #000000;
-
-            border-radius: 8px;
-            border: 1px solid transparent;
-            overflow: hidden;
-
+            background-color: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(10px);
             box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.35);
+            border-radius: 8px;
+            border: 1px solid black;
+            overflow: hidden;
 
             a {
                 display: block;

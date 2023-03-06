@@ -11,6 +11,8 @@
     z-index: 80;
     width: 100%;
 
+    border-bottom: 1px solid transparent;
+
     &.beingScrolled {
         transition: border 0ms;
         border-bottom: 1px solid var(--border);
