@@ -1,11 +1,12 @@
 import type {AppProps} from 'next/app'
 import Head from 'next/head'
 
+import '../styles/globals.scss'
+import '../styles/theming.scss'
+
 import {ThemeProvider} from '@/hooks'
 import {ErrorBoundary} from '@/error'
-import {ResponsiveAppBar} from '@/components'
-
-import '../styles/globals.scss'
+import {Footer, Header} from '@/components'
 
 export default function App({Component, pageProps}: AppProps) {
     return (
@@ -16,9 +17,16 @@ export default function App({Component, pageProps}: AppProps) {
                 </Head>
 
                 <ErrorBoundary id={'app'}>
-                    <ResponsiveAppBar />
+                    <Header />
 
-                    <Component {...pageProps} />
+                    <main
+                        style={{
+                            paddingTop: 'var(--header-height)',
+                        }}>
+                        <Component {...pageProps} />
+                    </main>
+
+                    <Footer />
                 </ErrorBoundary>
             </ThemeProvider>
         </ErrorBoundary>

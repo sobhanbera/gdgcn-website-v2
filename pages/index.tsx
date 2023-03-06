@@ -1,3 +1,23 @@
+import {
+    FeaturedEvents,
+    FooterInvites,
+    LandingInterface,
+    Snapshots,
+    Sponsers,
+} from '@/containers'
+
 export default function Home() {
-    return <div></div>
+    return (
+        <div>
+            <LandingInterface />
+
+            <Snapshots />
+
+            <FeaturedEvents />
+
+            <Sponsers />
+
+            <FooterInvites />
+        </div>
+    )
 }

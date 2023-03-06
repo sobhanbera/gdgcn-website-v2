@@ -1,0 +1,33 @@
+.heading {
+    width: 90%;
+    margin: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        font-size: 46px;
+        font-family: SBRoobert SemiBold;
+        text-align: center;
+
+        padding: 20px 18px 30px 18px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .heading {
+        p {
+            font-size: 38px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .heading {
+        p {
+            font-size: 30px;
+        }
+    }
+}

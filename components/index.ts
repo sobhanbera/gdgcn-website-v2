@@ -5,3 +5,9 @@
  */
 
 export * from './ResponsiveAppBar'
+
+export * from './Footer'
+export * from './Header'
+export * from './Heading'
+
+export * from './Svgs'

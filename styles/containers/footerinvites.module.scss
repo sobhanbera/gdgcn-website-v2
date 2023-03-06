@@ -1,0 +1,138 @@
+.footerInviteRoot {
+    width: 100%;
+    padding: 100px 0;
+
+    .footerInviteContainer {
+        width: 70%;
+        margin: auto;
+        border-radius: 15px;
+
+        padding: 65px 15px;
+
+        background-color: var(--primary);
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+
+        box-shadow: 0 10px 3px 0 rgba(var(--primary-rgb), 0.2);
+
+        .leftSection {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                padding: 3px 15px;
+                color: #ffffff;
+                font-family: 'SBRoobert Bold';
+                font-size: 40px;
+            }
+        }
+
+        .rightSection {
+            padding: 15px 0;
+
+            p {
+                padding: 3px 15px;
+                color: #ffffff;
+                font-family: 'SBRoobert Medium';
+                font-size: 16px;
+            }
+
+            .buttonContainer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 15px 15px;
+
+                .button {
+                    margin-left: 10px;
+
+                    svg {
+                        border-radius: 5px;
+                        overflow: hidden;
+                        width: 50px;
+                        height: 50px;
+                        padding: 12px;
+
+                        background-color: rgba(var(--primary-dark-rgb), 1);
+                        stroke: white;
+
+                        &.email,
+                        &.website,
+                        &.instagram {
+                            fill: none;
+                        }
+
+                        &.linkedin,
+                        &.twitter {
+                            stroke: none;
+                            fill: white;
+                        }
+
+                        &:hover {
+                            transform: scale(1.05);
+                        }
+
+                        &:active {
+                            transform: scale(1);
+                            background-color: rgba(
+                                var(--primary-dark-rgb),
+                                0.7
+                            );
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .footerInviteRoot {
+        .footerInviteContainer {
+            width: 85%;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .footerInviteRoot {
+        .footerInviteContainer {
+            width: 90%;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .footerInviteRoot {
+        .footerInviteContainer {
+            width: 92%;
+
+            .leftSection {
+                p {
+                    font-size: 30px;
+                    text-align: center;
+                }
+            }
+
+            .rightSection {
+                p {
+                    font-size: 14px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .footerInviteRoot {
+        .footerInviteContainer {
+            width: 92%;
+        }
+    }
+}

@@ -11,16 +11,16 @@ import Button from '@mui/material/Button'
 import MenuItem from '@mui/material/MenuItem'
 
 const pages = [
-    { route: '/home', name: 'Home' },
-    { route: '/aboutus', name: 'About Us' },
-    { route: '/team', name: 'Team' },
-    { route: '/events', name: 'Events' },
-    { route: '/sponsors', name: 'Sponsors & Partners' },
-    { route: '/contactus', name: 'Contact Us' },
-    { route: '/faqs', name: 'FAQs' },
+    {route: '/home', name: 'Home'},
+    {route: '/aboutus', name: 'About Us'},
+    {route: '/team', name: 'Team'},
+    {route: '/events', name: 'Events'},
+    {route: '/sponsors', name: 'Sponsors & Partners'},
+    {route: '/contactus', name: 'Contact Us'},
+    {route: '/faqs', name: 'FAQs'},
 ]
 
-interface ResponsiveAppBarProps { }
+interface ResponsiveAppBarProps {}
 export const ResponsiveAppBar = (_props: ResponsiveAppBarProps) => {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
         null,
@@ -36,10 +36,10 @@ export const ResponsiveAppBar = (_props: ResponsiveAppBarProps) => {
 
     return (
         <AppBar position="static">
-            <Container maxWidth="xl" sx={{ backgroundColor: '#E9E8E8' }}>
+            <Container maxWidth="xl" sx={{backgroundColor: '#E9E8E8'}}>
                 <Toolbar>
                     <Box
-                        sx={{ flexGrow: 0.2, display: { xs: 'flex', md: 'none' } }}>
+                        sx={{flexGrow: 0.2, display: {xs: 'flex', md: 'none'}}}>
                         <IconButton
                             size="medium"
                             aria-controls="menu-appbar"
@@ -63,7 +63,7 @@ export const ResponsiveAppBar = (_props: ResponsiveAppBarProps) => {
                             open={Boolean(anchorElNav)}
                             onClose={handleCloseNavMenu}
                             sx={{
-                                display: { xs: 'block', md: 'none' },
+                                display: {xs: 'block', md: 'none'},
                             }}>
                             {pages.map(pageData => (
                                 <a href={pageData.route}>
@@ -72,7 +72,7 @@ export const ResponsiveAppBar = (_props: ResponsiveAppBarProps) => {
                                         onClick={handleCloseNavMenu}>
                                         <Typography
                                             textAlign="center"
-                                            sx={{ textTransform: 'none' }}>
+                                            sx={{textTransform: 'none'}}>
                                             {pageData.name}
                                         </Typography>
                                     </MenuItem>
@@ -83,11 +83,11 @@ export const ResponsiveAppBar = (_props: ResponsiveAppBarProps) => {
                     <img
                         alt="Your logo."
                         src="https://i.imgur.com/CQdQVc1.png"
-                        style={{ width: '290px' }}
+                        style={{width: '290px'}}
                     />
                     {/* Desktop version code starts */}
 
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                    <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
                         {pages.map(pageData => (
                             <a href={pageData.route}>
                                 <Button

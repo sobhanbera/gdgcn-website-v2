@@ -1,0 +1,32 @@
+// sponsers.module.scss
+.sponsersRoot {
+    .sponsersContainer {
+        .sponsersList {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            .sponserImage {
+                width: 125px;
+                height: 125px;
+                margin: 10px;
+                object-fit: contain;
+
+                filter: grayscale(100%);
+
+                &:hover {
+                    filter: grayscale(0%);
+                    mix-blend-mode: darken;
+                }
+
+                &.google {
+                }
+                &.jetbrains {
+                    width: 180px;
+                    height: 180px;
+                }
+            }
+        }
+    }
+}
