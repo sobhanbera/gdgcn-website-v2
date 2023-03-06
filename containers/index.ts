@@ -6,5 +6,7 @@
 export * from './FooterInvites'
 export * from './LandingInterface'
 
+export * from './FeaturedEvents'
+
 export * from './Sponsers'
 export * from './Snapshots'

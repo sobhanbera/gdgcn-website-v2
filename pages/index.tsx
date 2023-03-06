@@ -1,4 +1,5 @@
 import {
+    FeaturedEvents,
     FooterInvites,
     LandingInterface,
     Snapshots,
@@ -11,6 +12,8 @@ export default function Home() {
             <LandingInterface />
 
             <Snapshots />
+
+            <FeaturedEvents />
 
             <Sponsers />
 
