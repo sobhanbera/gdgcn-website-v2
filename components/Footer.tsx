@@ -19,7 +19,7 @@ export function Footer(props: FooterProps) {
                 <div className={styles.footerRight}>
                     <ul>
                         <li>
-                            <Link href={'/team'}>Home</Link>
+                            <Link href={'/'}>Home</Link>
                         </li>
 
                         <li>
@@ -27,19 +27,19 @@ export function Footer(props: FooterProps) {
                         </li>
 
                         <li>
-                            <Link href={'/team'}>Events</Link>
+                            <Link href={'/events'}>Events</Link>
                         </li>
 
                         <li>
-                            <Link href={'/team'}>Sponsers</Link>
+                            <Link href={'/#sponsors'}>Sponsers</Link>
                         </li>
 
                         <li>
-                            <Link href={'/team'}>FAQs</Link>
+                            <Link href={'/faqs'}>FAQs</Link>
                         </li>
 
                         <li>
-                            <Link href={'/team'}>Contact Us</Link>
+                            <Link href={'/contactus'}>Contact Us</Link>
                         </li>
                     </ul>
                 </div>

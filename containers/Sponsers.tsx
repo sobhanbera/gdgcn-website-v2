@@ -3,7 +3,7 @@ import styles from '@/styles/containers/sponsers.module.scss'
 
 export function Sponsers() {
     return (
-        <div className={styles.sponsersRoot}>
+        <div className={styles.sponsersRoot} id={'sponsors'}>
             <div className={styles.sponsersContainer}>
                 <Heading>Sponsors & Partners</Heading>
 
