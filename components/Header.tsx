@@ -25,11 +25,11 @@ export function Header(props: HeaderProps) {
      * all these scroll behavious should be performed under state update
      * functions else greeting scroll controllers are not working that well
      */
-    // const hideMenu = () => {
-    //     setShowMenu(false)
-    //     // also nomalize the scroll
-    //     document.body.style.overflow = 'scroll'
-    // }
+    const hideMenu = () => {
+        setShowMenu(false)
+        // also nomalize the scroll
+        document.body.style.overflow = 'scroll'
+    }
 
     /**
      * disable scroling when any kind of meny is opened
@@ -141,27 +141,27 @@ export function Header(props: HeaderProps) {
                             opacity: showMenu ? 1 : 0,
                         }}>
                         <ul>
-                            <li>
+                            <li onClick={() => hideMenu()}>
                                 <Link href={'/'}>Home</Link>
                             </li>
 
-                            <li>
+                            <li onClick={() => hideMenu()}>
                                 <Link href={'/team'}>Team</Link>
                             </li>
 
-                            <li>
+                            <li onClick={() => hideMenu()}>
                                 <Link href={'/events'}>Events</Link>
                             </li>
 
-                            <li>
+                            <li onClick={() => hideMenu()}>
                                 <Link href={'/#sponsors'}>Sponsers</Link>
                             </li>
 
-                            <li>
+                            <li onClick={() => hideMenu()}>
                                 <Link href={'/faqs'}>FAQs</Link>
                             </li>
 
-                            <li>
+                            <li onClick={() => hideMenu()}>
                                 <Link href={'/contactus'}>Contact Us</Link>
                             </li>
                         </ul>
