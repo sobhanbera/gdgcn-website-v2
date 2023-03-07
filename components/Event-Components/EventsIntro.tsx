@@ -38,7 +38,7 @@ const PastEvents = (props: Props) => {
                     <Typography
                         sx={{
                             fontFamily: 'Fira Sans',
-                            fontSize: '20px',
+                            fontSize: '22px',
                             fontWeight: 500,
                             color: '#73777B',
                             position: 'relative',
@@ -52,7 +52,7 @@ const PastEvents = (props: Props) => {
                     <Typography
                         sx={{
                             fontFamily: 'Fira Sans',
-                            fontSize: '16px',
+                            fontSize: '20px',
                             fontWeight: 400,
                             marginTop: '16px',
                         }}>
@@ -68,7 +68,7 @@ const PastEvents = (props: Props) => {
                 <Grid xs={12} md={4}>
                     <Lottie
                         animationData={EventAnimation}
-                        style={{height: '70%', marginTop: '4%'}}
+                        style={{height: '70%', marginTop: '7%'}}
                     />
                 </Grid>
             </Grid>
