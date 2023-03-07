@@ -104,7 +104,7 @@ const Intro = () => {
                                 fontSize: '20px',
                                 fontWeight: 400,
                                 marginTop: '16px',
-                                marginRight:'15px'
+                                marginRight: '15px',
                             }}>
                             GDG Cloud Nagpur aspires to expand its community of
                             passionate and fervent developers to encapsulate the

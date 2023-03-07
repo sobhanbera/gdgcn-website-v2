@@ -1,14 +1,13 @@
-import { Box, Grid, Typography } from '@mui/material'
+import {Box, Grid, Typography} from '@mui/material'
 import React from 'react'
 import Card from '@mui/material/Card'
 import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import Button from '@mui/material/Button'
-import DeleteIcon from '@mui/icons-material/Delete';
-import SendIcon from '@mui/icons-material/Send';
-import Stack from '@mui/material/Stack';
-
+import DeleteIcon from '@mui/icons-material/Delete'
+import SendIcon from '@mui/icons-material/Send'
+import Stack from '@mui/material/Stack'
 
 type Props = {}
 
@@ -90,7 +89,6 @@ const PastEvents = (props: Props) => {
                         }}>
                         Take a Glimpse of our past events
                     </Typography>
-
                 </Grid>
             </Grid>
             <Box>
@@ -113,45 +111,53 @@ const PastEvents = (props: Props) => {
                                 }}
                                 xs={12}
                                 md={3}>
-                                <Card sx={{ maxHeight: 520 }}>
+                                <Card sx={{maxHeight: 520}}>
                                     <CardMedia
                                         component="img"
                                         alt="green iguana"
                                         height="150"
                                         image={data.image}
                                     />
-                                    <CardContent sx={{ paddingBottom: '0px' }}>
+                                    <CardContent sx={{paddingBottom: '0px'}}>
                                         <Typography
                                             gutterBottom
                                             variant="h5"
                                             component="div">
                                             {data.title}
                                         </Typography>
-                                        <Stack spacing={2} sx={{ marginBottom: '10px' }}>
-                                            <Button sx={{
-                                                textTransform: 'none',
-                                                fontSize: '13px',
-                                                color: '#DB4437',
-                                                borderColor: '#DB4437',
-                                                '&:hover': {
-                                                    borderColor: '#fff',
-                                                    backgroundColor: '#DB4437',
-                                                    color: '#fff'
-                                                },
-                                                cursor: 'auto'
-                                            }} variant="outlined" >
+                                        <Stack
+                                            spacing={2}
+                                            sx={{marginBottom: '10px'}}>
+                                            <Button
+                                                sx={{
+                                                    textTransform: 'none',
+                                                    fontSize: '13px',
+                                                    color: '#DB4437',
+                                                    borderColor: '#DB4437',
+                                                    '&:hover': {
+                                                        borderColor: '#fff',
+                                                        backgroundColor:
+                                                            '#DB4437',
+                                                        color: '#fff',
+                                                    },
+                                                    cursor: 'auto',
+                                                }}
+                                                variant="outlined">
                                                 {data.location}
                                             </Button>
-                                            <Button sx={{
-                                                fontSize: '13px',
-                                                borderColor: '#0F9D58',
-                                                color: '#0F9D58',
-                                                '&:hover': {
-                                                    backgroundColor: '#0F9D58',
-                                                    color: '#ffff',
-                                                },
-                                                cursor: 'auto'
-                                            }} variant="outlined">
+                                            <Button
+                                                sx={{
+                                                    fontSize: '13px',
+                                                    borderColor: '#0F9D58',
+                                                    color: '#0F9D58',
+                                                    '&:hover': {
+                                                        backgroundColor:
+                                                            '#0F9D58',
+                                                        color: '#ffff',
+                                                    },
+                                                    cursor: 'auto',
+                                                }}
+                                                variant="outlined">
                                                 {data.date}
                                             </Button>
                                         </Stack>
@@ -162,14 +168,18 @@ const PastEvents = (props: Props) => {
                                         </Typography>
                                     </CardContent>
                                     <CardActions>
-                                        <Button href={data.link} size="small" variant="contained" sx={{
-                                            backgroundColor: '#0F9D58',
-                                            color: '#ffff',
-                                            '&:hover': {
-                                                backgroundColor: '#F4B400',
+                                        <Button
+                                            href={data.link}
+                                            size="small"
+                                            variant="contained"
+                                            sx={{
+                                                backgroundColor: '#0F9D58',
                                                 color: '#ffff',
-                                            },
-                                        }}>
+                                                '&:hover': {
+                                                    backgroundColor: '#F4B400',
+                                                    color: '#ffff',
+                                                },
+                                            }}>
                                             Register Now
                                         </Button>
                                     </CardActions>
