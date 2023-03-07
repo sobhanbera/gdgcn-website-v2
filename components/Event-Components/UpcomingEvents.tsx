@@ -86,7 +86,7 @@ const UpcomingEvents = (props: Props) => {
                                         height="140"
                                         image={data.image}
                                     />
-                                    <CardContent>
+                                    <CardContent sx={{ paddingBottom: '0px' }}>
                                         <Typography
                                             gutterBottom
                                             variant="h5"
