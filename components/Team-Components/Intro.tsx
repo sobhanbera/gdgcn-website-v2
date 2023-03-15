@@ -22,6 +22,7 @@ let img3 = 'https://i.imgur.com/svZRSRh.png'
 const leads = [
     {
         name: 'Vedant Khairnar',
+        image:'https://i.imgur.com/d8IQqPy.jpg',
         linkedin: 'https://www.linkedin.com/in/vedantkhairnar/',
         github: 'https://github.com/VedantKhairnar',
         role: 'Organiser',
@@ -29,6 +30,7 @@ const leads = [
     },
     {
         name: 'Aaniruddha Khandwe',
+        image:'https://i.imgur.com/Ro6czxl.png',
         linkedin: 'https://www.linkedin.com/in/aniruddha-khandwe-4008ab137/',
         github: 'https://github.com/aniruddha1khandwe',
         role: 'Co-Organiser',
@@ -36,6 +38,7 @@ const leads = [
     },
     {
         name: 'Sarang Prabhate',
+        image:'',
         linkedin: 'https://www.linkedin.com/in/aniruddha-khandwe-4008ab137/',
         github: 'https://github.com/aniruddha1khandwe',
         role: 'Operations Lead',
@@ -46,6 +49,7 @@ const leads = [
 const domainLeads = [
     {
         name: 'Mohit Chandak',
+        image:'',
         linkedin: 'https://www.linkedin.com/in/chandak-mohit/',
         github: 'https://github.com/mohitchandak',
         role: 'Lead Community Manager',
@@ -53,6 +57,7 @@ const domainLeads = [
     },
     {
         name: 'Aaliya Ali',
+        image:'https://i.imgur.com/jXHlKWj.jpg',
         linkedin: 'https://www.linkedin.com/in/aaliyaali',
         github: 'https://github.com/Aaliya-Ali',
         role: 'Content Team Lead',
@@ -60,6 +65,7 @@ const domainLeads = [
     },
     {
         name: 'Rinesh Patil',
+        image:'',
         linkedin: 'https://www.linkedin.com/in/aaliyaali',
         github: 'https://github.com/Aaliya-Ali',
         role: 'Content Team Lead',
@@ -153,6 +159,7 @@ const Intro = () => {
                     {leads.map(
                         (data: {
                             name: string
+                            image:string
                             linkedin: string
                             github: string
                             role: string
@@ -171,7 +178,7 @@ const Intro = () => {
                                     }}>
                                     <Avatar
                                         alt="Remy Sharp"
-                                        src="https://i.imgur.com/LvMSuHJ.png"
+                                        src={data.image}
                                         sx={{
                                             width: 150,
                                             height: 150,
@@ -266,6 +273,7 @@ const Intro = () => {
                     {domainLeads.map(
                         (data: {
                             name: string
+                            image:string
                             linkedin: string
                             github: string
                             role: string
@@ -284,7 +292,7 @@ const Intro = () => {
                                     }}>
                                     <Avatar
                                         alt="Remy Sharp"
-                                        src="https://i.imgur.com/LvMSuHJ.png"
+                                        src={data.image}
                                         sx={{
                                             width: 150,
                                             height: 150,
