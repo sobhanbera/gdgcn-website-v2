@@ -21,7 +21,7 @@ const communityManagers = [
     },
     {
         name: 'Naincy Pande',
-        image:'',
+        image:'https://i.imgur.com/97y6IQ2.jpg',
         linkedin: 'www.linkedin.com/in/naincy-pande',
         github: 'https://github.com/Naincy05',
         role: 'Community Manager',

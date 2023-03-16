@@ -38,7 +38,7 @@ const leads = [
     },
     {
         name: 'Sarang Prabhate',
-        image:'',
+        image:'https://i.imgur.com/5G0MQdk.jpg',
         linkedin: 'https://www.linkedin.com/in/aniruddha-khandwe-4008ab137/',
         github: 'https://github.com/aniruddha1khandwe',
         role: 'Operations Lead',
