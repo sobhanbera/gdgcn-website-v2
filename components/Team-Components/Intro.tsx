@@ -49,7 +49,7 @@ const leads = [
 const domainLeads = [
     {
         name: 'Mohit Chandak',
-        image:'',
+        image:'https://i.imgur.com/vMOEj8M.jpg',
         linkedin: 'https://www.linkedin.com/in/chandak-mohit/',
         github: 'https://github.com/mohitchandak',
         role: 'Lead Community Manager',
@@ -65,7 +65,7 @@ const domainLeads = [
     },
     {
         name: 'Rinesh Patil',
-        image:'',
+        image:'https://i.imgur.com/MW7ClCr.jpg',
         linkedin: 'https://www.linkedin.com/in/aaliyaali',
         github: 'https://github.com/Aaliya-Ali',
         role: 'Content Team Lead',
