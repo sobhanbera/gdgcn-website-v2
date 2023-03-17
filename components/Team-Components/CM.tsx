@@ -5,6 +5,7 @@ import {FaGithub, FaLinkedin} from 'react-icons/fa'
 const communityManagers = [
     {
         name: 'Chandrakant Bobdae',
+        image:'https://i.imgur.com/al3h8BR.jpg',
         linkedin: 'https://www.linkedin.com/in/chandrakant22/',
         github: 'https://github.com/chandrakant22',
         role: 'Community Manager',
@@ -12,6 +13,7 @@ const communityManagers = [
     },
     {
         name: 'Stuti Agrawal',
+        image:'https://i.imgur.com/6SNOWAy.jpg',
         linkedin: 'https://www.linkedin.com/in/stuti-agrawal-2417a2238/',
         github: 'https://github.com/Stutiagrawal10',
         role: 'Community Manager',
@@ -19,6 +21,7 @@ const communityManagers = [
     },
     {
         name: 'Naincy Pande',
+        image:'https://i.imgur.com/97y6IQ2.jpg',
         linkedin: 'www.linkedin.com/in/naincy-pande',
         github: 'https://github.com/Naincy05',
         role: 'Community Manager',
@@ -26,6 +29,7 @@ const communityManagers = [
     },
     {
         name: 'Shweta Choulwar',
+        image:'https://i.imgur.com/LTTQwWU.jpg',
         linkedin: 'https://www.linkedin.com/in/shweta-choulwar-362184251/',
         github: 'https://github.com/Shweta-Choulwar',
         role: 'Community Manager',
@@ -43,6 +47,7 @@ const CM = () => {
                 {communityManagers.map(
                     (data: {
                         name: string
+                        image:string
                         linkedin: string
                         github: string
                         role: string
@@ -68,7 +73,7 @@ const CM = () => {
                                 }}>
                                 <Avatar
                                     alt="Remy Sharp"
-                                    src="https://i.imgur.com/LvMSuHJ.png"
+                                    src={data.image}
                                     sx={{
                                         width: 100,
                                         height: 100,

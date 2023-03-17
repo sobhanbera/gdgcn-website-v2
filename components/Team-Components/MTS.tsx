@@ -6,6 +6,7 @@ import {FaGithub, FaLinkedin} from 'react-icons/fa'
 const mts = [
     {
         name: 'Kush Munot',
+        image:'https://i.imgur.com/LvMSuHJ.png',
         linkedin: 'https://www.linkedin.com/in/kush-munot/',
         github: 'https://github.com/Kush-munot',
         role: 'Member of Technical Staff',
@@ -13,6 +14,7 @@ const mts = [
     },
     {
         name: 'Sobhan Bera',
+        image:'https://i.imgur.com/6ULaxUR.jpg',
         linkedin: 'https://www.linkedin.com/in/sobhanbera',
         github: 'https://github.com/sobhanbera',
         role: 'Member of Technical Staff',
@@ -20,6 +22,7 @@ const mts = [
     },
     {
         name: 'Dewansh Chaudhari',
+        image:'https://i.imgur.com/fKOSKXc.jpg',
         linkedin: 'https://www.linkedin.com/in/dewansh-chaudhari-252252195/',
         github: 'https://github.com/dewanshchaudhari',
         role: 'Member of Technical Staff',
@@ -27,6 +30,7 @@ const mts = [
     },
     {
         name: 'Shubham Jeswani',
+        image:'https://i.imgur.com/9F99nmf.png',
         linkedin: 'https://www.linkedin.com/in/skjeswani/',
         github: 'https://github.com/skjeswani2001',
         role: 'Member of Technical Staff',
@@ -44,6 +48,7 @@ const MTS = () => {
                 {mts.map(
                     (data: {
                         name: string
+                        image:string
                         linkedin: string
                         github: string
                         role: string
@@ -69,7 +74,7 @@ const MTS = () => {
                                 }}>
                                 <Avatar
                                     alt="Remy Sharp"
-                                    src="https://i.imgur.com/LvMSuHJ.png"
+                                    src={data.image}
                                     sx={{
                                         width: 100,
                                         height: 100,
