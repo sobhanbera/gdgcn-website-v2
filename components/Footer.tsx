@@ -10,7 +10,7 @@ export function Footer(props: FooterProps) {
     return (
         <footer className={styles.footer}>
             <div className={styles.footerContainer}>
-                <div className={styles.footerLeft}>
+                <div className={styles.footerLeft} data-aos="fade-right">
                     <img className={styles.regular} src={'/imgs/logo.png'} />
 
                     <img className={styles.small} src={'/imgs/logosmall.png'} />
@@ -18,27 +18,27 @@ export function Footer(props: FooterProps) {
 
                 <div className={styles.footerRight}>
                     <ul>
-                        <li>
+                        <li data-aos="fade-up" data-aos-delay="100">
                             <Link href={'/'}>Home</Link>
                         </li>
 
-                        <li>
+                        <li data-aos="fade-up" data-aos-delay="200">
                             <Link href={'/team'}>Team</Link>
                         </li>
 
-                        <li>
+                        <li data-aos="fade-up" data-aos-delay="300">
                             <Link href={'/events'}>Events</Link>
                         </li>
 
-                        <li>
+                        <li data-aos="fade-up" data-aos-delay="400">
                             <Link href={'/#sponsors'}>Sponsers</Link>
                         </li>
 
-                        <li>
+                        <li data-aos="fade-up" data-aos-delay="500">
                             <Link href={'/faqs'}>FAQs</Link>
                         </li>
 
-                        <li>
+                        <li data-aos="fade-up" data-aos-delay="600">
                             <Link href={'/contactus'}>Contact Us</Link>
                         </li>
                     </ul>
@@ -47,9 +47,17 @@ export function Footer(props: FooterProps) {
 
             <div className={styles.footerBottomArea}>
                 {/** the community name is resolve from css content of after selector */}
-                <p className={styles.copyrightText}>Copyright © 2023 </p>
+                <p
+                    className={styles.copyrightText}
+                    data-aos="fade-up"
+                    data-aos-delay="650">
+                    Copyright © 2023{' '}
+                </p>
 
-                <p className={styles.madeWithLoveText}>
+                <p
+                    className={styles.madeWithLoveText}
+                    data-aos="fade-up"
+                    data-aos-delay="650">
                     Made with ♥️ in India.
                 </p>
             </div>

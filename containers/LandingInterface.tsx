@@ -7,16 +7,22 @@ export function LandingInterface() {
         <div className={styles.landingInterfaceRoot}>
             <div className={styles.landingContainer}>
                 {/* <img src={'/imgs/community.png'} /> */}
-                <p className={styles.title}>
+                <p className={styles.title} data-aos="fade-up">
                     Let's build a robust community together!
                     {/* Building a robust community for developers!!! */}
                 </p>
 
-                <p className={styles.track}>
+                <p
+                    className={styles.track}
+                    data-aos="fade-up"
+                    data-aos-delay="300">
                     Made by programmers, made for programmers.
                 </p>
 
-                <button className={styles.joinButton}>
+                <button
+                    className={styles.joinButton}
+                    data-aos="fade-up"
+                    data-aos-delay="500">
                     <a href={COMMUNITY_URL} target={'_blank'}>
                         Join Community
                     </a>

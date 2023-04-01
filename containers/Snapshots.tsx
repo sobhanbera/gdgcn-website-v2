@@ -63,6 +63,7 @@ export function Snapshots() {
                     {SnapshotData.map(snapshot => {
                         return (
                             <div
+                                data-aos="fade-up"
                                 className={`${styles.snapshot} ${snapshot.class}`}
                                 key={snapshot.url}
                                 style={{

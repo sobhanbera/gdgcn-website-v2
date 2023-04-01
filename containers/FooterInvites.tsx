@@ -52,19 +52,25 @@ const SocialLinksData: Array<{
 export function FooterInvites() {
     return (
         <div className={styles.footerInviteRoot}>
-            <div className={styles.footerInviteContainer}>
+            <div
+                className={styles.footerInviteContainer}
+                data-aos="zoom-out-down">
                 <div className={styles.leftSection}>
-                    <p>Join The Community!</p>
-                    <p>Follow us Online!</p>
+                    <p data-aos="fade-down">Join The Community!</p>
+                    <p data-aos="fade-up">Follow us Online!</p>
                 </div>
 
                 <div className={styles.rightSection}>
-                    <p>Already 8,000+ people are with us in this journey.</p>
+                    <p data-aos="fade-down">
+                        Already 8,000+ people are with us in this journey.
+                    </p>
 
                     <div className={styles.buttonContainer}>
-                        {SocialLinksData.map(SocialLink => {
+                        {SocialLinksData.map((SocialLink, index) => {
                             return (
                                 <Link
+                                    data-aos="zoom-in-up"
+                                    data-aos-delay={index * 100}
                                     className={styles.button}
                                     href={SocialLink.url}
                                     target={'_blank'}

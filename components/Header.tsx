@@ -69,7 +69,7 @@ export function Header(props: HeaderProps) {
             }`}>
             <div className={styles.headerMain}>
                 <div className={styles.headerLeft}>
-                    <div className={styles.headerLogo}>
+                    <div className={styles.headerLogo} data-aos="fade-right">
                         <Link href="/">
                             <img
                                 className={styles.regular}
@@ -87,23 +87,23 @@ export function Header(props: HeaderProps) {
 
                     <div className={styles.headerNavigation}>
                         <ul>
-                            <li>
+                            <li data-aos="fade-left" data-aos-delay="100">
                                 <Link href={'/'}>Home</Link>
                             </li>
 
-                            <li>
+                            <li data-aos="fade-left" data-aos-delay="200">
                                 <Link href={'/team'}>Team</Link>
                             </li>
 
-                            <li>
+                            <li data-aos="fade-left" data-aos-delay="300">
                                 <Link href={'/events'}>Events</Link>
                             </li>
 
-                            <li>
+                            <li data-aos="fade-left" data-aos-delay="400">
                                 <Link href={'/faqs'}>FAQs</Link>
                             </li>
 
-                            <li>
+                            <li data-aos="fade-left" data-aos-delay="500">
                                 <Link href={'/contactus'}>Contact Us</Link>
                             </li>
                         </ul>
@@ -111,7 +111,10 @@ export function Header(props: HeaderProps) {
                 </div>
 
                 <div className={styles.headerRight}>
-                    <button className={styles.headerJoinButton}>
+                    <button
+                        className={styles.headerJoinButton}
+                        data-aos="fade-left"
+                        data-aos-delay="500">
                         <a href={COMMUNITY_URL} target={'_blank'}>
                             Join Community
                         </a>
