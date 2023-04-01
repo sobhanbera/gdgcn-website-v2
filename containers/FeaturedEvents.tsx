@@ -61,6 +61,9 @@ export function FeaturedEvents() {
                 <div className={styles.eventsList}>
                     {FeaturedEventsData.map((event, index) => (
                         <div
+                            data-aos={
+                                index % 2 === 0 ? 'fade-right' : 'fade-left'
+                            }
                             className={styles.eventCard}
                             onMouseEnter={() => setBackground(event.image)}
                             // onMouseLeave={() => setBackground('')}

@@ -9,10 +9,12 @@ export function Sponsers() {
 
                 <div className={styles.sponsersList}>
                     <img
+                        data-aos="fade-right"
                         className={`${styles.sponserImage} ${styles.google}`}
                         src={'/sponsers/google.png'}
                     />
                     <img
+                        data-aos="fade-left"
                         className={`${styles.sponserImage} ${styles.jetbrains}`}
                         src={'/sponsers/jetbrains.png'}
                     />

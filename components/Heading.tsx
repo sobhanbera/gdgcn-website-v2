@@ -5,7 +5,7 @@ interface HeadingProps {
 }
 export function Heading({children}: HeadingProps) {
     return (
-        <div className={styles.heading}>
+        <div className={styles.heading} data-aos="zoom-in-up">
             <p>{children}</p>
         </div>
     )
