@@ -13,18 +13,14 @@
                 margin: 10px;
                 object-fit: contain;
 
-                filter: grayscale(100%);
-
-                &:hover {
-                    filter: grayscale(0%);
-                    mix-blend-mode: darken;
-                }
-
                 &.google {
                 }
                 &.jetbrains {
                     width: 180px;
                     height: 180px;
+                }
+                &.cloudcasa {
+                    width: 250px;
                 }
             }
         }
