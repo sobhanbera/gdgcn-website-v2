@@ -22,7 +22,7 @@ let img3 = 'https://i.imgur.com/svZRSRh.png'
 const leads = [
     {
         name: 'Vedant Khairnar',
-        image:'https://i.imgur.com/d8IQqPy.jpg',
+        image: 'https://i.imgur.com/d8IQqPy.jpg',
         linkedin: 'https://www.linkedin.com/in/vedantkhairnar/',
         github: 'https://github.com/VedantKhairnar',
         role: 'Organiser',
@@ -30,7 +30,7 @@ const leads = [
     },
     {
         name: 'Aaniruddha Khandwe',
-        image:'https://i.imgur.com/Ro6czxl.png',
+        image: 'https://i.imgur.com/Ro6czxl.png',
         linkedin: 'https://www.linkedin.com/in/aniruddha-khandwe-4008ab137/',
         github: 'https://github.com/aniruddha1khandwe',
         role: 'Co-Organiser',
@@ -38,7 +38,7 @@ const leads = [
     },
     {
         name: 'Sarang Prabhate',
-        image:'https://i.imgur.com/5G0MQdk.jpg',
+        image: 'https://i.imgur.com/5G0MQdk.jpg',
         linkedin: 'https://www.linkedin.com/in/aniruddha-khandwe-4008ab137/',
         github: 'https://github.com/aniruddha1khandwe',
         role: 'Operations Lead',
@@ -49,7 +49,7 @@ const leads = [
 const domainLeads = [
     {
         name: 'Mohit Chandak',
-        image:'https://i.imgur.com/vMOEj8M.jpg',
+        image: 'https://i.imgur.com/vMOEj8M.jpg',
         linkedin: 'https://www.linkedin.com/in/chandak-mohit/',
         github: 'https://github.com/mohitchandak',
         role: 'Lead Community Manager',
@@ -57,7 +57,7 @@ const domainLeads = [
     },
     {
         name: 'Aaliya Ali',
-        image:'https://i.imgur.com/jXHlKWj.jpg',
+        image: 'https://i.imgur.com/jXHlKWj.jpg',
         linkedin: 'https://www.linkedin.com/in/aaliyaali',
         github: 'https://github.com/Aaliya-Ali',
         role: 'Content Team Lead',
@@ -65,7 +65,7 @@ const domainLeads = [
     },
     {
         name: 'Rinesh Patil',
-        image:'https://i.imgur.com/MW7ClCr.jpg',
+        image: 'https://i.imgur.com/MW7ClCr.jpg',
         linkedin: 'https://www.linkedin.com/in/aaliyaali',
         github: 'https://github.com/Aaliya-Ali',
         role: 'Content Team Lead',
@@ -159,7 +159,7 @@ const Intro = () => {
                     {leads.map(
                         (data: {
                             name: string
-                            image:string
+                            image: string
                             linkedin: string
                             github: string
                             role: string
@@ -273,7 +273,7 @@ const Intro = () => {
                     {domainLeads.map(
                         (data: {
                             name: string
-                            image:string
+                            image: string
                             linkedin: string
                             github: string
                             role: string

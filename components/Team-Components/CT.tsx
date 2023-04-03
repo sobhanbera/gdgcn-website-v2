@@ -5,7 +5,7 @@ import {FaGithub, FaLinkedin} from 'react-icons/fa'
 const techWriter = [
     {
         name: 'Neenad Sahasrabuddhe',
-        image:'https://i.imgur.com/dse9EZe.png',
+        image: 'https://i.imgur.com/dse9EZe.png',
         linkedin: 'https://linkedin.com/in/neenad-sahasrabuddhe-1017841a4/',
         github: 'https://github.com/nenu3414',
         role: 'Technical Content Writer',
@@ -13,7 +13,7 @@ const techWriter = [
     },
     {
         name: 'Samiksha Kachore',
-        image:'https://i.imgur.com/yxckv4o.jpg',
+        image: 'https://i.imgur.com/yxckv4o.jpg',
         linkedin: 'https://www.linkedin.com/in/samiksha-kachore',
         github: 'https://github.com/samikshakachore?tab=stars',
         role: 'Technical Content writing',
@@ -21,7 +21,7 @@ const techWriter = [
     },
     {
         name: 'Shailesh Kumar Thakur',
-        image:'https://i.imgur.com/NyJnz3w.jpg',
+        image: 'https://i.imgur.com/NyJnz3w.jpg',
         linkedin: 'https://www.linkedin.com/in/shailesh-kumar-thakur-991316205',
         github: 'https://github.com/shaileshthakur1',
         role: ' Technical Content Writer',
@@ -29,7 +29,7 @@ const techWriter = [
     },
     {
         name: 'Abhilasha Walke',
-        image:'https://i.imgur.com/w68ndP0.jpg',
+        image: 'https://i.imgur.com/w68ndP0.jpg',
         linkedin: 'http://www.linkedin.com/in/abhilasha-walke-923817262',
         github: '-',
         role: ' Technical Content writer',
@@ -47,7 +47,7 @@ const CM = () => {
                 {techWriter.map(
                     (data: {
                         name: string
-                        image:string
+                        image: string
                         linkedin: string
                         github: string
                         role: string

@@ -10,21 +10,21 @@ export function Sponsers() {
                 <div className={styles.sponsersList}>
                     <img
                         data-aos="fade-left"
-						data-aos-delay="100"
+                        data-aos-delay="100"
                         className={`${styles.sponserImage} ${styles.google}`}
                         src={'/sponsers/google.png'}
                     />
 
                     <img
                         data-aos="fade-left"
-						data-aos-delay="200"
+                        data-aos-delay="200"
                         className={`${styles.sponserImage} ${styles.jetbrains}`}
                         src={'/sponsers/jetbrains.png'}
                     />
 
                     <img
-						data-aos="fade-left"
-						data-aos-delay="300"
+                        data-aos="fade-left"
+                        data-aos-delay="300"
                         className={`${styles.sponserImage} ${styles.cloudcasa}`}
                         src={'/sponsers/cloudcasa.png'}
                     />

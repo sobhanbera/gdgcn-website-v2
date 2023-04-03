@@ -6,7 +6,7 @@ import {FaGithub, FaLinkedin} from 'react-icons/fa'
 const growthManagers = [
     {
         name: 'Om Kishor Kharche',
-        image:'https://i.imgur.com/t9XpDEq.jpg',
+        image: 'https://i.imgur.com/t9XpDEq.jpg',
         linkedin: 'https://www.linkedin.com/in/om-kharche-621bb2183',
         github: 'https://github.com/omkharche',
         role: 'Growth Expert',
@@ -14,7 +14,7 @@ const growthManagers = [
     },
     {
         name: 'Janhavi Bajpai',
-        image:'https://i.imgur.com/5ADwt2K.jpg',
+        image: 'https://i.imgur.com/5ADwt2K.jpg',
         linkedin: 'https://www.linkedin.com/in/janhavibajpai/',
         github: 'https://github.com/janhavibajpai01',
         role: 'Growth Expert',
@@ -32,7 +32,7 @@ const MTS = () => {
                 {growthManagers.map(
                     (data: {
                         name: string
-                        image:string
+                        image: string
                         linkedin: string
                         github: string
                         role: string

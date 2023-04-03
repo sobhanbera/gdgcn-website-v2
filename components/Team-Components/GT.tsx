@@ -6,7 +6,7 @@ import {FaGithub, FaLinkedin} from 'react-icons/fa'
 const graphics = [
     {
         name: 'Pratiksha Abhay Ekbote',
-        image:'https://i.imgur.com/X6ye980.jpg',
+        image: 'https://i.imgur.com/X6ye980.jpg',
         linkedin: 'https://www.linkedin.com/in/pratikshaekbote',
         github: 'https://github.com/Pratikshaekbote',
         role: 'Graphic Designer',
@@ -14,7 +14,7 @@ const graphics = [
     },
     {
         name: 'Mohammad Faysal Khan',
-        image:'https://i.imgur.com/7NqikKe.jpg',
+        image: 'https://i.imgur.com/7NqikKe.jpg',
         linkedin: 'https://www.linkedin.com/in/faysal-khan-40aa1521b/',
         github: 'https://github.com/fk-mfk',
         role: 'Graphic Designer',
@@ -22,7 +22,7 @@ const graphics = [
     },
     {
         name: 'Parth Kaware',
-        image:'https://i.imgur.com/Mc9Lj9G.jpg',
+        image: 'https://i.imgur.com/Mc9Lj9G.jpg',
         linkedin: 'https://www.linkedin.com/in/parth-kaware/',
         github: 'https://github.com/Kaware-Parth',
         role: 'Graphic Designier',
@@ -40,7 +40,7 @@ const MTS = () => {
                 {graphics.map(
                     (data: {
                         name: string
-                        image:string
+                        image: string
                         linkedin: string
                         github: string
                         role: string
