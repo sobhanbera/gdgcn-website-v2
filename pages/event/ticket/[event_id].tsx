@@ -3,10 +3,6 @@ import {useRouter} from 'next/router'
 
 import html2canvas from 'html2canvas'
 import QRCode from 'react-qr-code'
-import {
-    exportComponentAsJPEG,
-    exportComponentAsPDF,
-} from 'react-component-export-image'
 
 import styles from '@/styles/pages/ticketgenerator.module.scss'
 
