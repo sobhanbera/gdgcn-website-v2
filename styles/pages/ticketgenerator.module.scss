@@ -81,12 +81,49 @@
                 }
             }
 
-            .ticket {
-                max-width: 200px;
+            .ticketGeneratedText {
+                p {
+                    font-size: 24px;
+                    font-weight: 700;
+                    padding: 10px 16px;
 
-                border: 2px solid rgba(var(--primary-rgb), 0.5);
-                border-radius: 6px;
-                padding: 10px;
+                    text-align: center;
+                    margin: 0 0 20px 0;
+
+                    span {
+                        color: var(--primary);
+                    }
+                }
+            }
+
+            .ticketBackground {
+                background-color: transparent;
+
+                .ticket {
+                    position: relative;
+
+                    img {
+                        max-width: 350px;
+                    }
+
+                    .ticketQR {
+                        position: absolute;
+                        bottom: 80px;
+                        left: 70px;
+
+                        width: 60%;
+
+                        p {
+                            text-align: center;
+                            padding-top: 10px;
+                            font-family: 'Open Sans';
+                            font-size: 16px;
+                            font-weight: 700;
+                            color: var(--primary);
+                            text-transform: uppercase;
+                        }
+                    }
+                }
             }
         }
     }

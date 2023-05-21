@@ -9,10 +9,8 @@ import styles from '@/styles/pages/ticketgenerator.module.scss'
 const MailingList = [
     // list some test emails here
     // for testing purposes
-    // remove this before production
-    'mail@test.com',
-    'test@test.com',
-    'test@mail.com',
+    // these emails should be in lowercase
+    'sobhan@bera.com',
 ]
 
 const EVENT_ID = 31052023
@@ -61,7 +59,8 @@ export default function Generate() {
     // generate the actual QR Code
     const generateQRCode = (finalEmail: string = email) => {
         // generate the QR Code
-        if (MailingList.includes(finalEmail)) {
+        const emailToCheck = finalEmail.toLowerCase()
+        if (MailingList.includes(emailToCheck)) {
             setShowQRCode(true)
             setError(null)
             exportTicket()
@@ -94,26 +93,45 @@ export default function Generate() {
                         </button>
                     </div>
 
-                    <div ref={ticketRef}>
+                    {showQRCode && (
+                        <div className={styles.ticketGeneratedText}>
+                            <p>
+                                Click on the <span>ticket</span> below to
+                                download it.
+                            </p>
+                        </div>
+                    )}
+
+                    <div
+                        ref={ticketRef}
+                        className={styles.ticketBackground}
+                        onClick={exportTicket}>
                         {showQRCode && (
                             <div
                                 className={styles.ticket}
                                 onClick={() => {
                                     // exportTicket()
                                 }}>
-                                <QRCode
-                                    size={256}
-                                    style={{
-                                        height: 'auto',
-                                        maxWidth: '100%',
-                                        width: '100%',
-                                    }}
-                                    value={JSON.stringify({
-                                        email: email,
-                                        event_id: EVENT_ID,
-                                    })}
-                                    level="L"
-                                />
+                                <img src={'/tickets/ccd/2023/template.png'} />
+
+                                <div className={styles.ticketQR}>
+                                    <QRCode
+                                        size={256}
+                                        style={{
+                                            height: 'auto',
+                                            maxWidth: '100%',
+                                            width: '100%',
+                                        }}
+                                        bgColor="transparent"
+                                        value={JSON.stringify({
+                                            email: email,
+                                            event_id: EVENT_ID,
+                                        })}
+                                        level="L"
+                                    />
+
+                                    <p>{email}</p>
+                                </div>
                             </div>
                         )}
                     </div>
