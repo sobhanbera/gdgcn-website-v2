@@ -62,8 +62,11 @@ export default function Generate() {
         const emailToCheck = finalEmail.toLowerCase()
         if (MailingList.includes(emailToCheck)) {
             setShowQRCode(true)
-            setError(null)
-            exportTicket()
+            setError('Wait for 3 seconds to download the ticket')
+
+            setTimeout(() => {
+                exportTicket()
+            }, 3000)
         } else {
             setShowQRCode(false)
             setError("Invalid email! You haven't registered in the event.")
