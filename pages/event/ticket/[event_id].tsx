@@ -7,7 +7,7 @@ import QRCode from 'react-qr-code'
 import styles from '@/styles/pages/ticketgenerator.module.scss'
 import axios from 'axios'
 
-const EVENT_ID = 31052023
+const EVENT_ID = 'ccdngp23'
 export default function Generate() {
     // getting the event id of the event
     const router = useRouter()
@@ -25,7 +25,7 @@ export default function Generate() {
         if (event_id === undefined) return
 
         // console.log(event_id, EVENT_ID)
-        if (Number(event_id) !== EVENT_ID || !event_id) {
+        if (String(event_id) !== EVENT_ID || !event_id) {
             setError('Invalid event id')
             router.push('/')
         }
@@ -146,7 +146,7 @@ export default function Generate() {
                                         level="L"
                                     />
 
-                                    <p>{email}</p>
+                                    {/* <p>{email}</p> */}
                                 </div>
                             </div>
                         )}
