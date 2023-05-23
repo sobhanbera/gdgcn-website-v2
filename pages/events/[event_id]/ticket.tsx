@@ -153,10 +153,7 @@ export default function Generate() {
                                             width: '100%',
                                         }}
                                         bgColor="transparent"
-                                        value={JSON.stringify({
-                                            email: email,
-                                            event_id: EVENT_ID,
-                                        })}
+                                        value={email}
                                         level="L"
                                     />
 
