@@ -18,10 +18,12 @@ export default function Generate() {
     // for any error cases
     const [error, setError] = useState<string | null>(null)
     const [email, setEmail] = useState<string>('')
+    const [loading, setLoading] = useState<boolean>(false)
     const [showQRCode, setShowQRCode] = useState<boolean>(false)
 
     // check for validity and more stuff
     useEffect(() => {
+        console.log(event_id, router.query)
         if (event_id === undefined) return
 
         // console.log(event_id, EVENT_ID)
@@ -58,6 +60,7 @@ export default function Generate() {
      */
     const generateQRCode = (finalEmail: string = email) => {
         // cors enable
+        setLoading(true)
         axios(
             `https://email-check.codewansh.workers.dev/api/check/${finalEmail}`,
             {
@@ -72,15 +75,23 @@ export default function Generate() {
                 if (data.check === true || data.check === 'true') {
                     setShowQRCode(true)
                     setError('Wait for 3 seconds to download the ticket')
+                    setLoading(false)
 
-                    setTimeout(() => {
+                    // if already generated
+                    if (showQRCode) {
                         exportTicket()
-                    }, 3000)
+                    } else {
+                        setTimeout(() => {
+                            exportTicket()
+                        }, 3000)
+                    }
                 } else {
+                    setLoading(false)
                     alert("Invalid email! You haven't registered in the event.")
                 }
             })
             .catch(_err => {
+                setLoading(false)
                 alert("Invalid email! You haven't registered in the event.")
             })
     }
@@ -104,8 +115,11 @@ export default function Generate() {
                         />
                         {error && <p>{error}</p>}
 
-                        <button onClick={() => generateQRCode()}>
-                            Get Ticket
+                        <button
+                            onClick={() => {
+                                if (!loading) generateQRCode()
+                            }}>
+                            {loading ? 'Loading...' : 'Generate'}
                         </button>
                     </div>
 
