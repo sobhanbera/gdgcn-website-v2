@@ -5,13 +5,7 @@ import html2canvas from 'html2canvas'
 import QRCode from 'react-qr-code'
 
 import styles from '@/styles/pages/ticketgenerator.module.scss'
-
-const MailingList = [
-    // list some test emails here
-    // for testing purposes
-    // these emails should be in lowercase
-    'sobhan@bera.com',
-]
+import axios from 'axios'
 
 const EVENT_ID = 31052023
 export default function Generate() {
@@ -30,7 +24,7 @@ export default function Generate() {
     useEffect(() => {
         if (event_id === undefined) return
 
-        console.log(event_id, EVENT_ID)
+        // console.log(event_id, EVENT_ID)
         if (Number(event_id) !== EVENT_ID || !event_id) {
             setError('Invalid event id')
             router.push('/')
@@ -56,21 +50,39 @@ export default function Generate() {
         })
     }
 
-    // generate the actual QR Code
+    /**
+     * Generates the QR code for the email
+     * make an api request to - https://email-check.codewansh.workers.dev/api/check/{email}
+     * response - {"check":true}
+     * @param {string} finalEmail - email to be checked
+     */
     const generateQRCode = (finalEmail: string = email) => {
-        // generate the QR Code
-        const emailToCheck = finalEmail.toLowerCase()
-        if (MailingList.includes(emailToCheck)) {
-            setShowQRCode(true)
-            setError('Wait for 3 seconds to download the ticket')
+        // cors enable
+        axios(
+            `https://email-check.codewansh.workers.dev/api/check/${finalEmail}`,
+            {
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Methods': 'GET',
+                },
+            },
+        )
+            .then(res => {
+                const data = res.data
+                if (data.check === true || data.check === 'true') {
+                    setShowQRCode(true)
+                    setError('Wait for 3 seconds to download the ticket')
 
-            setTimeout(() => {
-                exportTicket()
-            }, 3000)
-        } else {
-            setShowQRCode(false)
-            setError("Invalid email! You haven't registered in the event.")
-        }
+                    setTimeout(() => {
+                        exportTicket()
+                    }, 3000)
+                } else {
+                    alert("Invalid email! You haven't registered in the event.")
+                }
+            })
+            .catch(_err => {
+                alert("Invalid email! You haven't registered in the event.")
+            })
     }
 
     return (
@@ -86,6 +98,7 @@ export default function Generate() {
                             value={email}
                             onChange={e => {
                                 setEmail(e.target.value)
+                                setShowQRCode(false)
                             }}
                             placeholder={'Enter your email'}
                         />
