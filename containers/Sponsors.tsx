@@ -1,5 +1,5 @@
 import {Heading} from '@/components'
-import styles from '@/styles/containers/Sponsors.module.scss'
+import styles from '@/styles/containers/sponsors.module.scss'
 
 export function Sponsors() {
     return (
@@ -12,21 +12,21 @@ export function Sponsors() {
                         data-aos="fade-left"
                         data-aos-delay="100"
                         className={`${styles.sponserImage} ${styles.google}`}
-                        src={'/Sponsors/google.png'}
+                        src={'/sponsors/google.png'}
                     />
 
                     <img
                         data-aos="fade-left"
                         data-aos-delay="200"
                         className={`${styles.sponserImage} ${styles.jetbrains}`}
-                        src={'/Sponsors/jetbrains.png'}
+                        src={'/sponsors/jetbrains.png'}
                     />
 
                     <img
                         data-aos="fade-left"
                         data-aos-delay="300"
                         className={`${styles.sponserImage} ${styles.cloudcasa}`}
-                        src={'/Sponsors/cloudcasa.png'}
+                        src={'/sponsors/cloudcasa.png'}
                     />
                 </div>
             </div>
