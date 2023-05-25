@@ -31,7 +31,7 @@ export function Footer(props: FooterProps) {
                         </li>
 
                         <li data-aos="fade-up" data-aos-delay="400">
-                            <Link href={'/#sponsors'}>Sponsers</Link>
+                            <Link href={'/#sponsors'}>Sponsors</Link>
                         </li>
 
                         <li data-aos="fade-up" data-aos-delay="500">

@@ -8,5 +8,5 @@ export * from './LandingInterface'
 
 export * from './FeaturedEvents'
 
-export * from './Sponsers'
+export * from './Sponsors'
 export * from './Snapshots'

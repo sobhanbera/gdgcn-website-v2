@@ -3,7 +3,7 @@ import {
     FooterInvites,
     LandingInterface,
     Snapshots,
-    Sponsers,
+    Sponsors,
 } from '@/containers'
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
 
             <FeaturedEvents />
 
-            <Sponsers />
+            <Sponsors />
 
             <FooterInvites />
         </div>

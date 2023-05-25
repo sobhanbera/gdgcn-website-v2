@@ -1,32 +1,32 @@
 import {Heading} from '@/components'
-import styles from '@/styles/containers/sponsers.module.scss'
+import styles from '@/styles/containers/Sponsors.module.scss'
 
-export function Sponsers() {
+export function Sponsors() {
     return (
-        <div className={styles.sponsersRoot} id={'sponsors'}>
-            <div className={styles.sponsersContainer}>
+        <div className={styles.sponsorsRoot} id={'sponsors'}>
+            <div className={styles.sponsorsContainer}>
                 <Heading>Sponsors & Partners</Heading>
 
-                <div className={styles.sponsersList}>
+                <div className={styles.sponsorsList}>
                     <img
                         data-aos="fade-left"
                         data-aos-delay="100"
                         className={`${styles.sponserImage} ${styles.google}`}
-                        src={'/sponsers/google.png'}
+                        src={'/Sponsors/google.png'}
                     />
 
                     <img
                         data-aos="fade-left"
                         data-aos-delay="200"
                         className={`${styles.sponserImage} ${styles.jetbrains}`}
-                        src={'/sponsers/jetbrains.png'}
+                        src={'/Sponsors/jetbrains.png'}
                     />
 
                     <img
                         data-aos="fade-left"
                         data-aos-delay="300"
                         className={`${styles.sponserImage} ${styles.cloudcasa}`}
-                        src={'/sponsers/cloudcasa.png'}
+                        src={'/Sponsors/cloudcasa.png'}
                     />
                 </div>
             </div>

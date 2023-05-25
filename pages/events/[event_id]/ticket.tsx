@@ -36,7 +36,7 @@ export default function Generate() {
     const exportTicket = () => {
         if (!ticketRef.current) return
 
-        html2canvas(ticketRef.current,{backgroundColor:null}).then(canvas => {
+        html2canvas(ticketRef.current, {backgroundColor: null}).then(canvas => {
             // Convert the canvas to a data URL
             const dataUrl = canvas
                 .toDataURL('image/png')
@@ -142,7 +142,9 @@ export default function Generate() {
                                 onClick={() => {
                                     // exportTicket()
                                 }}>
-                                <img src={'/tickets/ccd/2023/template_new.png'} />
+                                <img
+                                    src={'/tickets/ccd/2023/template_new.png'}
+                                />
 
                                 <div className={styles.ticketQR}>
                                     <QRCode

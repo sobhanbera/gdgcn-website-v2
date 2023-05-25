@@ -157,7 +157,7 @@ export function Header(props: HeaderProps) {
                             </li>
 
                             <li onClick={() => hideMenu()}>
-                                <Link href={'/#sponsors'}>Sponsers</Link>
+                                <Link href={'/#sponsors'}>Sponsors</Link>
                             </li>
 
                             <li onClick={() => hideMenu()}>
