@@ -18,6 +18,7 @@ export default function Generate() {
     // for any error cases
     const [error, setError] = useState<string | null>(null)
     const [email, setEmail] = useState<string>('')
+    const [name, setName] = useState<string>('')
     const [loading, setLoading] = useState<boolean>(false)
     const [showQRCode, setShowQRCode] = useState<boolean>(false)
 
@@ -73,18 +74,55 @@ export default function Generate() {
             .then(res => {
                 const data = res.data
                 if (data.check === true || data.check === 'true') {
-                    setShowQRCode(true)
-                    setError('Wait for 3 seconds to download the ticket')
-                    setLoading(false)
+                    //email-check.codewansh.workers.dev/api/name/ishicjain19@gmail.com
+                    axios(
+                        `https://email-check.codewansh.workers.dev/api/name/${finalEmail}`,
+                        {
+                            headers: {
+                                'Access-Control-Allow-Origin': '*',
+                                'Access-Control-Allow-Methods': 'GET',
+                            },
+                        },
+                    )
+                        .then(res => {
+                            if (
+                                res.data.email === finalEmail &&
+                                res.data.name
+                            ) {
+                                setError(
+                                    'Wait for a seconds to download the ticket',
+                                )
+                                setLoading(false)
+                                setName(res.data.name)
 
-                    // if already generated
-                    if (showQRCode) {
-                        exportTicket()
-                    } else {
-                        setTimeout(() => {
-                            exportTicket()
-                        }, 3000)
-                    }
+                                // if already generated
+                                if (showQRCode) {
+                                    exportTicket()
+                                } else {
+                                    setTimeout(() => {
+                                        exportTicket()
+                                    }, 2000)
+                                }
+                                setShowQRCode(true)
+                            }
+                        })
+                        .catch(_err => {
+                            // if error occurs just generate ticket with QR
+                            setError(
+                                'Wait for a seconds to download the ticket',
+                            )
+                            setLoading(false)
+
+                            // if already generated
+                            if (showQRCode) {
+                                exportTicket()
+                            } else {
+                                setTimeout(() => {
+                                    exportTicket()
+                                }, 2000)
+                            }
+                            setShowQRCode(true)
+                        })
                 } else {
                     setLoading(false)
                     alert("Invalid email! You haven't registered in the event.")
@@ -159,7 +197,7 @@ export default function Generate() {
                                         level="L"
                                     />
 
-                                    {/* <p>{email}</p> */}
+                                    <p>{name}</p>
                                 </div>
                             </div>
                         )}
