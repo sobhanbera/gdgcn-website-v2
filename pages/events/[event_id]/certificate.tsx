@@ -2,7 +2,7 @@ import {useEffect, useRef, useState} from 'react'
 import {useRouter} from 'next/router'
 import styles from '@/styles/pages/ticketgenerator.module.scss'
 import axios from 'axios'
-import Image from 'next/image'
+import html2canvas from 'html2canvas'
 
 const EVENT_ID = 'ccdngp23'
 export default function Generate() {
@@ -33,10 +33,25 @@ export default function Generate() {
 
     const exportCertificate = () => {
         if (!ticketRef.current || !name) return
-        const link = document.createElement('a')
-        link.href = `/api/og?name=${encodeURIComponent(name)}`
-        link.download = `ccd2023-certificate.png`
-        link.click()
+        // const link = document.createElement('a')
+        // link.href = `/api/og?name=${encodeURIComponent(name)}`
+        // link.download = `ccd2023-certificate.png`
+        // link.click()
+
+        html2canvas(ticketRef.current, {backgroundColor: null}).then(canvas => {
+            // Convert the canvas to a data URL
+            const dataUrl = canvas
+                .toDataURL('image/png')
+                .replace('image/png', 'image/octet-stream')
+
+            // Create a link element
+            const link = document.createElement('a')
+            link.href = dataUrl
+            link.download = `ccd2023-certificate.png`
+
+            // Simulate a click on the link to start the download
+            link.click()
+        })
     }
 
     /**
@@ -161,12 +176,25 @@ export default function Generate() {
                         className={styles.ticketBackground}
                         onClick={exportCertificate}>
                         {showCertificate && (
-                            <img
-                                src={`/api/og?name=${encodeURIComponent(name)}`}
-                                alt={`${name}'s certificate`}
-                                width={1000}
-                                height={700}
-                            />
+                            // <img
+                            //     src={`/api/og?name=${encodeURIComponent(name)}`}
+                            //     alt={`${name}'s certificate`}
+                            //     width={1000}
+                            //     height={700}
+                            // />
+
+                            <div className={styles.certificate}>
+                                <img
+                                    src={
+                                        '/certificates/ccd/2023/certificate.png'
+                                    }
+                                    alt={`${name}'s certificate`}
+                                />
+
+                                <div className={styles.attendeeName}>
+                                    <p>{name}</p>
+                                </div>
+                            </div>
                         )}
                     </div>
                 </div>

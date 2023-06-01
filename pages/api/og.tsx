@@ -34,15 +34,7 @@ export default async function (req: NextRequest) {
                     }
                 />
 
-                <p
-                    style={{
-                        zIndex: 10,
-                        position: 'absolute',
-                        top: 622,
-                        // left: 600,
-                    }}>
-                    {name}
-                </p>
+                <p>{name}</p>
             </div>
         ),
         {
