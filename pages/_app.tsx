@@ -12,6 +12,7 @@ import {ThemeProvider} from '@/hooks'
 import {ErrorBoundary} from '@/error'
 import {Footer, Header} from '@/components'
 import {useEffect} from 'react'
+import {justForFun} from '@/utils/justforfun'
 
 export default function App({Component, pageProps}: AppProps) {
     useEffect(() => {
@@ -24,6 +25,10 @@ export default function App({Component, pageProps}: AppProps) {
             debounceDelay: 100,
             throttleDelay: 100,
         })
+    }, [])
+
+    useEffect(() => {
+        justForFun()
     }, [])
 
     return (
