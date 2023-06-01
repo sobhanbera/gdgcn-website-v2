@@ -11,8 +11,10 @@ const vivaldiTextFont = fetch(
 export default async function (req: NextRequest) {
     const vivaldiTextFontData = await vivaldiTextFont
     const {searchParams} = new URL(req.url)
+
     const hasName = searchParams.has('name')
-    const name = hasName ? searchParams.get('name') : 'Shashwat Kale'
+    const name = hasName ? searchParams.get('name') : ''
+
     return new ImageResponse(
         (
             <div
@@ -28,9 +30,10 @@ export default async function (req: NextRequest) {
                 }}>
                 <img
                     src={
-                        'http://localhost:3000/certificates/ccd/2023/certificate.png'
+                        'https://gdgcnagpur.tech/certificates/ccd/2023/certificate.png'
                     }
                 />
+
                 <p
                     style={{
                         zIndex: 10,
