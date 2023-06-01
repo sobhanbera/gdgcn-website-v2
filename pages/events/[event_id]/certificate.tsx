@@ -32,9 +32,9 @@ export default function Generate() {
     }, [event_id])
 
     const exportCertificate = () => {
-        if (!ticketRef.current) return
+        if (!ticketRef.current || !name) return
         const link = document.createElement('a')
-        link.href = `/api/og?name=${name}`
+        link.href = `/api/og?name=${encodeURIComponent(name)}`
         link.download = `ccd2023-certificate.png`
         link.click()
     }
@@ -161,10 +161,8 @@ export default function Generate() {
                         className={styles.ticketBackground}
                         onClick={exportCertificate}>
                         {showCertificate && (
-                            <Image
-                                src={`http://localhost:3000/api/og?name=${encodeURIComponent(
-                                    name,
-                                )}`}
+                            <img
+                                src={`/api/og?name=${encodeURIComponent(name)}`}
                                 alt={`${name}'s certificate`}
                                 width={1000}
                                 height={700}
